@@ -1,17 +1,16 @@
 const search = document.querySelector('#search');
-const boxTexts = document.querySelectorAll('a.getAttribute('data-title')');
+const boxTexts = document.querySelectorAll('a.imgs');
 
 const handleSearch = event => {
   const searchTerm = event.target.value.toLowerCase();
   
   boxTexts.forEach(boxText => {
-    const text = boxText.textContent.toLowerCase();
-    const box = $('.thumbnail');
+    const text = boxText.getAttribute('data-title').toLowerCase();
     
     if(text.indexOf(searchTerm) > -1) {
-      box.style.display = "block";
+      boxText.style.display = "block";
     } else {
-      box.style.display = "none";  
+      boxText.style.display = "none";  
     }
   });
 
