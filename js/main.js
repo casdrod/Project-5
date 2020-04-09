@@ -6,7 +6,7 @@ const handleSearch = event => {
   
   boxTexts.forEach(boxText => {
     const text = boxText.getAttribute('data-title').toLowerCase();
-    
+    console.log(text);
     if(text.indexOf(searchTerm) > -1) {
       boxText.style.display = "block";
     } else {
